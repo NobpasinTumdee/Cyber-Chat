@@ -1,0 +1,86 @@
+.theme-selector {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--selector-bg);
+  border: 1px solid var(--selector-primary);
+  border-radius: 6px;
+  padding: 8px;
+  min-width: 150px;
+  font-family: 'Fira Code', monospace;
+  z-index: 100;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.theme-selector-header {
+  color: var(--selector-primary);
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 0 0 5px var(--selector-primary);
+}
+
+.theme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.theme-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.theme-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--theme-color);
+}
+
+.theme-item--active {
+  background: rgba(0, 255, 0, 0.1);
+  border-color: var(--selector-primary);
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.theme-preview {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--theme-color);
+}
+
+.theme-name {
+  color: var(--selector-text);
+  font-size: 11px;
+  flex: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .theme-selector {
+    top: 10px;
+    right: 10px;
+    min-width: 120px;
+    padding: 6px;
+  }
+  
+  .theme-item {
+    padding: 4px;
+  }
+  
+  .theme-preview {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .theme-name {
+    font-size: 10px;
+  }
+}
